@@ -16,7 +16,8 @@ export default css`
 
   html {
     font-size: 62.5%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     ${media.xlDesktop`font-size: 60%;`}
     ${media.desktop`font-size: 57.5%;`}
@@ -37,9 +38,4 @@ export default css`
     color: ${({ theme }) => theme.color};
     background: ${({ theme }) => theme.background};
   }
-  
-  /* 
-  ::selection {
-    color: ${({ theme }) => theme['blue-2']};
-  } */
 `

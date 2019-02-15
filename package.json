@@ -9,12 +9,8 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
-    "prop-types": "^15.6.2",
     "react": "^16.6.3",
-    "react-beautiful-dnd": "^10.0.2",
     "react-dom": "^16.6.3",
-    "react-responsive": "^6.0.1",
     "styled-components": "^4.1.1"
   },
   "devDependencies": {

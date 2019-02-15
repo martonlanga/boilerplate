@@ -2,7 +2,7 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-import { Provider, Consumer } from '../components/Context'
+import { Provider } from '../components/Context'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
@@ -27,28 +27,16 @@ export default class MyApp extends App {
     return (
       <Container>
         <Provider>
-          <Consumer>
-            {({ theme: color, updateState }) => (
-              <ThemeProvider theme={theme[color]}>
-                <>
-                  <GlobalStyle />
-                  <Page>
-                    <Nav
-                      changeTheme={() =>
-                        updateState(({ theme: currentColor }) =>
-                          currentColor === 'dark'
-                            ? { theme: 'light' }
-                            : { theme: 'dark' }
-                        )
-                      }
-                    />
-                    <Component {...pageProps} />
-                    <Footer />
-                  </Page>
-                </>
-              </ThemeProvider>
-            )}
-          </Consumer>
+          <ThemeProvider theme={theme}>
+            <>
+              <GlobalStyle />
+              <Page>
+                <Nav />
+                <Component {...pageProps} />
+                <Footer />
+              </Page>
+            </>
+          </ThemeProvider>
         </Provider>
       </Container>
     )

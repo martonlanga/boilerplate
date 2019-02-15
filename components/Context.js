@@ -4,7 +4,6 @@ const Context = React.createContext()
 
 class Provider extends React.Component {
   state = {
-    theme: 'dark',
     updateState: newState => this.setState(newState)
   }
   render() {

@@ -1,6 +1,20 @@
 import { css } from 'styled-components'
 
 export default css`
+  /* reset button styles */
+  button,
+  input[type='submit'],
+  input[type='reset'] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    user-select: none;
+  }
+
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
   button,
   hr,
